@@ -1,0 +1,436 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>Aplicacion Dos </title>
+
+<!--grupo CSS-->
+<link rel="stylesheet" href="css/app2.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css"/>
+<!--grupo JavaScript-->
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/acciones.js"></script>
+<script src="phonegap.js" type="text/javascript"></script>
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+<body onLoad="MM_preloadImages('imagenes/semana.jpg','imagenes/via.jpg','imagenes/alfon.jpg','imagenes/atlixco.jpg','imagenes/alfon2.jpg')">
+<div data-role="page" id="Principal" data-theme="a">
+ <div data-role="header"   data-back-btn-theme="a">
+ <div>
+  <h1 style=" font-size:25px;"><i><center>Semana Santa</center></i></h1>
+      </div>
+      <div data-theme="a">
+         <img src="imagenes/sem.jpg" width="100%" height="650px">
+      </div>
+      
+      
+<div>
+    <ul id="lista" data-role="listview" data-theme="b" class="ui-listview ui-group-theme-a">
+    <li class="ui-first-child ui-last-child">
+      <a href="#Pagina1" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+      <h2>El Significado de la Semana Santa</h2>
+      </a>
+    </li>
+    <li class="ui-first-child ui-last-child">
+        <a href="#Pagina2" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+        <h2>Domingo de Pascua</h2>
+        </a>
+    </li>
+    <li class="ui-first-child ui-last-child">
+         <a href="#Pagina3" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+         <h2>Como se Establece la Semana Santa</h2>
+         </a>
+    </li>
+    <li class="ui-first-child ui-last-child">
+         <a href="#Pagina4" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+         <h2>Celebracion en Atlixco</h2>
+         </a>
+    </li> 
+    <li class="ui-first-child ui-last-child">
+         <a href="#Pagina5" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+         <h2>Celebracion en Iztapalapa</h2>
+         </a>
+    </li>
+        <li class="ui-first-child ui-last-child">
+         <a href="#Pagina6" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+         <h2>Celebracion en el Vaticano</h2>
+         </a>
+    </li>
+        <li class="ui-first-child ui-last-child">
+         <a href="#Pagina7" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+         <h2>Celebracion en Jerusalen</h2>
+         </a>
+    </li>
+        <li class="ui-first-child ui-last-child">
+         <a href="#Pagina8" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+         <h2>Celebracion en España</h2>
+         </a>
+    </li>
+       </ul>
+</div>
+<div data-role="footer" align="center" data-theme="a">
+   <div>
+       <img src="imagenes/persona_rosa.png" width="46" height="46">
+   </div>
+   <div>
+      <h4>Aplicacion dos</h4>
+      <h4>Mariana Cañete Mendez</h4>
+   </div>
+</div>
+</div>
+</div>
+
+<<div data-role="page" id="Pagina1" data-add-back-btn="true" data-theme="a">
+    <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+    <h1>Semana Santa</h1>
+    </div>
+    <div data-role="content" align="center">
+     <div data-role="collapsible" data-theme="a">
+     
+     <h2>Significado de la Semana Santa</h2>
+      <div>
+       
+        <p>La Semana Santa es la conmemoración anual cristiana de la Pasión, Muerte y Resurrección de Jesús de Nazaret. Por eso, es un período de intensa actividad litúrgica dentro de las diversas confesiones cristianas. Da comienzo el Domingo de Ramos y finaliza el Domingo de Resurrección,1 aunque su celebración suele iniciarse en varios lugares el viernes anterior (Viernes de Dolores) y se considera parte de la misma el Domingo de Resurrección.Que la iglesia católica dedica a recordar la pasión, muerte y resurrección de Jesús.
+       </p>
+       <img src="imagenes/sema.jpg" width="20%" height="20%">
+       <br>
+       <p>
+       El Domingo de Ramos abre solemnemente la Semana Santa, con el recuerdo de las Palmas y de la passión.
+       </p>
+       
+       <img src="imagenes/ramos.jpg" width="20%" height="20%">
+       <br>
+       <p>
+      En este día la Iglesia católica conmemora la institución de la Eucaristía en la Última Cena y el lavatorio de los pies realizado por Jesús.
+       </p>
+      <br>
+       <img src="imagenes/jueves-santos-lavado-de-pies.jpg" width="20%" height="20%">
+        <br>
+       <p>
+     El Viernes Santo se recuerda el vía crucis, así se llama al camino que Jesús tuvo que recorrer llevando sobre sus hombros el madero en el cual iba a ser crucificado. Su muerte en la cruz y su sepultura. 
+       </p>
+      <br>
+       <img src="imagenes/alfon.jpg" width="20%" height="20%">
+        <br>
+       <p>
+     Es la conmemoración de Jesús en el sepulcro y su Descenso al Abismo. Una vez ha anochecido, tiene lugar la principal celebración cristiana del año: la Vigilia Pascual.
+       </p>
+      <br>
+       <img src="imagenes/sabado-santo-.jpg" width="20%" height="20%">
+       <br>
+       <p>
+     El Domingo de Resurrección, es el día en que Jesucristo resucita después de la crucifixión, va al encuentro con sus apóstoles y luego sube hacia los cielos, también es la finalización de la Semana Santa.
+       </p>
+      <br>
+       <img src="imagenes/resu.jpg" width="10%" height="10%">
+     </div>    
+     </div>
+     </div>
+  <div data-role="footer" data-theme="a">
+    <h4>Mariana Cañete Mendez</h4>
+  </div>
+</div>
+</div>
+
+
+<div data-role="page" id="Pagina2" data-add-back-btn="true" data-theme="a">
+    <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+    <h1>Semana Santa</h1>
+    </div>
+    <div data-role="content" align="center">
+     <div data-role="collapsible" data-content-theme="false">
+        <h1>Domingo de Pascua</h1>  
+        <div data-role="content" align="center">
+     <div>
+       <p>La Semana Es habitual que se organicen Easter egg hunts, o búsqueda de huevos de chocolate, con los niños. Esto se suele hacer el domingo de Pascua. Las familias esconden huevos de plástico rellenos con algún dulce o pequeño capricho, y los niños los encuentran.
+
+Los más pequeños piensan que es el conejo de Pascua o el Easter Bunny, el que trae los huevos o los regalitos.
+
+          </p>
+          <div><img src="imagenes/domingodepascua1.jpg" width="45%" height="45%">
+        </div>
+     </div>
+     </div>
+     </div>
+     </div>
+  <div data-role="footer" data-theme="a">
+  
+    <h4>Mariana Cañete Mendez</h4>
+    </div>
+  </div>
+
+
+
+<div data-role="page" id="Pagina3" data-add-back-btn="true" data-theme="a">
+    <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+    <h1>Semana Santa</h1>
+    </div>
+    <div data-role="content" align="center">
+     <div>
+       <div data-role="collapsible" data-content-theme="false">
+      <h1>Como se establece la Semana Santa</h1>
+      
+      <p>La Iglesia Católica quiso ya desde un principio, conmemorar la muerte de Jesús el mismo día que lo relatan los evangelios. Ha sido tradición en los judíos celebrar su pascua sirviéndose del calendario lunar; por supuesto en la época de Jesús, la pascua se regía por los ciclos de la luna. Partiendo de esto, el calendario de Semana Santa, se obtiene a partir del día de la Resurrección, que es el domingo siguiente a la luna llena del mes de Nissan (el mes de los judíos) que corresponde a los días entre el 22 de marzo y el 25 de abril. Dicho de otra manarea, este día es el domingo después de la primera luna llena de primavera (la primavera, por lo general, comienza el 21 de marzo).
+</p>
+      <br>
+      </div>
+      </div>
+      </div>
+  <div data-role="footer" data-theme="a">
+    <h4>Mariana Cañete Mendez</h4>
+  </div>
+</div>
+
+
+<div data-role="page" id="Pagina4" data-add-back-btn="true" data-theme="a">
+    <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+    <h1>Semana Santa</h1>
+    </div><div data-role="main" class="ui-content">
+ <div data-role="collapsible" data-role-theme="a">
+   <h1>Celebracion en Atlixco</h1>
+   <div data-role="content" align="center">
+     <div>
+       <h2>Celebracion en Atlixco</h2>
+       <p>
+       Vía Crucis de Atlixco, en el estado de Puebla, en México, reúne desde hace más de un siglo en Semana Santa a un grupo de penitentes capaces de traspasar el umbral del dolor por su devoción, al salir en procesión encapuchados y descalzos, con grilletes y coronas de espinas.
+Atlixco, un municipio situado a 30 minutos de Puebla capital y que fue nombrado recientementePueblo Mágico, acogió este viernes la llamada procesión de los Engrillados, que se celebra cadaViernes Santo en medio de gran expectación.
+Las principales calles de este municipio situado a unos 150 kilómetros por carretera de la capital mexicana, se cubren con alfombras decorativas elaboradas con serrín de colores en un recorrido de cinco kilómetros que comienza en el Exconvento de San Francisco.
+Con un paso lento y quejumbroso, cientos de hombres semidesnudos y encadenados caminan en busca del perdón divino a través del dolor.
+          </p>
+          <p>El Vía Crucis de Atlixco, en el estado mexicano de Puebla, reúne desde hace más de un siglo en Semana Santa a un grupo de penitentes capaces de traspasar el umbral del dolor por su devoción, al salir en procesión encapuchados y descalzos, con grilletes y coronas de espinas.
+       </p>
+          <p><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image22','','imagenes/semana.jpg',1)"><img src="imagenes/sem.jpg" width="900" height="473" id="Image22"></a><br>
+          </p>
+          <p>
+            Con un paso lento y quejumbroso, cientos de hombres semidesnudos y encadenados caminan en busca del perdón divino a través del dolor.
+          </p>
+          <p><br>
+          </p>
+          <p><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image23','','imagenes/via.jpg',1)"><img src="imagenes/sem.jpg" width="900" height="473" id="Image23"></a><br>
+            <br>
+            Hacen recorridos con hermosas alfonbras donde pasa el viacrusis
+            <br>
+          </p>
+          <p><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image24','','imagenes/alfon.jpg',1)"><img src="imagenes/sem.jpg" width="900" height="473" id="Image24"></a><br>
+          </p>
+          <p>
+            Bajo el anonimato, el devoto confiesa que lleva un lustro participando y que lo hace con orgullo por todos los favores que el Señor le ha dado.
+          </p>
+          <p><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image25','','imagenes/atlixco.jpg',1)"><img src="imagenes/sem.jpg" width="900" height="473" id="Image25"></a><br>
+          </p>
+          <p>
+            Las principales calles de este municipio situado a unos 150 kilómetros por carretera de la capital mexicana, se cubren con alfombras decorativas elaboradas con serrín de colores en un recorrido de cinco kilómetros que comienza en el Exconvento de San Francisco.
+          </p>
+          <p><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image26','','imagenes/alfon2.jpg',1)"><img src="imagenes/sem.jpg" width="900" height="473" id="Image26"></a></p>
+          <p>
+  </p>
+            
+          </p>
+     </div>
+
+     </div>
+     </div>
+     </div>
+  <div data-role="footer" data-theme="a">
+    <h4>Mariana Cañete Mendez</h4>
+  </div>
+</div>
+</div>
+
+<div data-role="page" id="Pagina5" data-add-back-btn="true" data-theme="a">
+    <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+    <h1>Semana Santa</h1>
+    </div>
+    <div data-role="content" align="center">
+     <div>
+       <h2>Celebracion en Iztapalapa</h2>
+       <p>En Iztapalapa tiene lugar una ceremonia, fiesta y representación de la Pasión, que no responde ni a una narración sacra, ni a un teatro tradicional: es una expresión de múltiples aportaciones que se funde en una particular sincretización.
+El Domingo de Ramos, las casas y las calles se llenan de flores, las campanas se echan a vuelo, y un ángel con un niño inician la procesión que avanza lentamente.
+El Jueves Santo, los adornos en las calles son de color blanco y morado; los actores llegan al lugar donde han ensayado; llena de flores y frutas está la cárcel que Cristo ocupará más tarde. De una casa, sale la procesión que inician el niñoy el ángel, después las vírgenes, Jesús, los nazarenos, los sacerdotes y dignatarios romanos, flanqueados por los soldados.
+El Viemes Santo congrega multitudes; la presencia de los encargados de la seguridad y de los primeros auxilios a los visitantes es muy evidente. Llevan a Cristo de la cárcel a la explanada,donde hay una columna; ahí se suceden varios episodios.
+ Todo ello permite que la fiesta, ceremonia o representación continúe por lo que significa no sólo para los de Iztapalapa sino para la nación entera.
+
+          </p>
+
+
+          </p>
+          <div>
+           Jesùs hace trayecto hacia su crucificaciòn
+          <br>
+          <img src="imagenes/iz.jpg" width="300px" height="200" >
+          <br>
+            Jesùs es crucificado en el cerro de la Estrella.
+          <br>
+          <img src="imagenes/iz2.jpg" width="300px" height="180" >
+          <br>
+         En la representacion, Jesùs es lastimado por los soldados.
+          <br>
+          <img src="imagenes/iz1.jpg"width="300px" height="200" >
+          <br>
+
+          </div>
+
+     </div>
+     </div>
+  <div data-role="footer" data-theme="a">
+    <h4>Mariana Cañete Mendez</h4>
+  </div>
+</div>
+</div>
+
+<div data-role="page" id="Pagina6" data-add-back-btn="true" data-theme="a">
+    <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+    <h1>Semana Santa</h1>
+    </div>
+    <div data-role="content" align="center">
+     <div>
+       <h2>Celebracion en el Vaticano</h2>
+       <p>La Semana Santa en Roma empieza el Domingo de Ramos, con la Misa de bendición ofrecida por el Papa en Plaza San Pedro a las 9:30am. Como es ya tradición, al terminar la misa, el papa regala un mensaje especial a los jóvenes del mundo: el “Angelus”.
+
+El Lunes Santo, El Papa realiza una conmemoración al papa precedente Juan Pablo II, con una misa solemne a las 6pm siempre en Plaza San Pedro.
+El Jueves Santo , después de algunos días de retiro, el papa ofrecerá una Misa matutina (9:30am) bastante curiosa: La llaman “La Misa del Crisma”. En esta misa el papa bendice el Olio Santo (crisma) que sirve para uno de los sacramentos de la Iglesia Católica. El significado de esta misa es la unión de la Iglesia Católica como un único cuerpo y sentir al rededor del mundo.
+El Viernes Santo. Durante este día no se celebran misas hasta la Vigilia Pascual. Sin embargo en la Basílica de San Pedro, y en las principales Iglesias de Roma cantan muchísimos coros durante todo el día.
+Sábado Santo 
+Al igual que el Viernes Santo, el día Sábado no se realizan Misas hasta la noche. Este día podréis admirar las iglesias Romanas en modo diferente pues ninguna de ellas tendrá luces encendidas (tampoco velas), y no se entonan cantos. Este silencio viene a simbolizar la espera atenta del Anuncio de la resurrección de Jesús.
+Domingo de Resurrección
+En este día se celebra la misa más concurrida del mundo: El Papa se asoma en su balcón que da a la Plaza San Pedro a las 10:15 y ofrece el servicio que termina con el famoso “Urbi et Orbi”, el mensaje “para la ciudad y para el mundo” donde el Papa ofrece redención y bendiciones a todos los presentes.
+
+
+
+          </p>
+          <div>
+           El Papa lava los pies a doce personas elegidas entre los presentes (que representan a los doce apóstoles de Jesús) mientras se levantan cánticos religiosos.
+          <br>
+          <br>
+          <img src="imagenes/cenadomini.jpg" width="300px" height="200" >
+          <br>
+          <br>
+          El Via Crucis parte del interior del Coliseo y termina en las Colinas del Palatino.
+          <br>
+          <img src="imagenes/vati1.jpg" width="300px" height="180" >
+          <br>
+          <br>
+        El Papa se asoma en su balcòn y ofrece el servicio que termina con el famoso “Urbi et Orbi”, el mensaje “para la ciudad y para el mundo”
+          <br>
+          <img src="imagenes/vaticano.jpg"width="300px" height="200" >
+          <br>
+
+          </div>
+
+     </div>
+     </div>
+  <div data-role="footer" data-theme="a">
+    <h4>Mariana Cañete Mendez</h4>
+  </div>
+</div>
+</div>
+
+<div data-role="page" id="Pagina7" data-add-back-btn="true" data-theme="a">
+    <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+    <h1>Semana Santa</h1>
+    </div>
+    <div data-role="content" align="center">
+     <div>
+       <h2>Celebracion en Jerusalen</h2>
+       <p>Una emocionante celebración de imágenes y sonidos engloba gran parte de Jerusalén, donde cristianos locales y peregrinos festejan la Semana Santa. Domingo de Ramos 2011 en Jerusalén: una emocionante celebración de imágenes y sonidos engloba gran parte de la ciudad vieja, en la que cristianos locales y peregrinos comienzan a celebrar la semana más importante del año: la Semana Santa. Si para los cristianos de todo el mundo estos siete días son un acontecimiento especial, en Jerusalén son ciertamente únicos, pues es aquí donde tuvieron lugar los importantes sucesos que se celebran. El Barrio Cristiano bulle de actividad, con transeúntes que pasan llevando jubilosamente ramas de palma entrelazadas o ramas de olivo. Por doquier se puede ver a jóvenes scouts árabes cristianos luciendo sus coloridos uniformes, tocando la gaita y los tambores con gran entusiasmo.
+La procesión es tan pintoresca como multicultural, una jubilosa cacofonía de imágenes y sonidos, con grupos de todas las naciones haciendo gala de sus banderas y entonando canciones acompañándose de guitarras, tambores y otros instrumentos. Un grupo de sonrientes peregrinos de Filipinas, en camisetas blancas y gorras azules, es seguido por entusiásticos peregrinos polacos que enarbolan su bandera roja y por otros de Latinoamérica, que cantan y bailan. Los fieles siguen la misma ruta física y espiritual que Jesús recorrió hace 2000 años al entrar en Jerusalén montado en un borrico, según la profecía de Zacarías, cuando fue acogido por la gente que tendía ante él palmas y ramas. 
+
+
+
+          </p>
+          <div>
+           Cofradia de la entrada de Jesùs a Jerusalèn.
+          <br>
+          <img src="imagenes/jeru.JPG" width="300px" height="200" >
+          <br>
+          <br>
+          Bendicion de palmas
+          <br>
+         <img src="imagenes/easter.jpg"
+          <br>
+          <br>
+        Clérigos católicos participan en un servicio religioso realizado en la Iglesia del Santo Sepulcro de Jerusalén.
+          <br>
+          <img src="imagenes/Jeudi-Saint1.jpg" width="300px" height="180" >  <br>
+
+          </div>
+
+     </div>
+     </div>
+  <div data-role="footer" data-theme="a">
+    <h4>Mariana Cañete Mendez</h4>
+  </div>
+</div>
+</div>
+
+<div data-role="page" id="Pagina8" data-add-back-btn="true" data-theme="a">
+    <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+    <h1>Semana Santa</h1>
+    </div>
+    <div data-role="content" align="center">
+     <div>
+       <h2>Celebracion en España</h2>
+       <p>
+       La Semana Santa en España se celebra con la salida a la calle de manifestaciones de fe, llamadas procesiones, habitualmente organizadas por una cofradía. En cada procesión de Semana Santa pueden figurar una o varias hermandades, cada una con su paso o sus pasos, que suelen ser imágenes religiosas de la Pasión de Cristo, o imágenes marianas, aunque hay excepciones como los pasos alegóricos o los de santos
+
+
+          </p>
+          <div>
+          En las procesiones participan penitentes, que suelen llevar gorros cónicos, muy característicos de España, y que, según el lugar, se llamarán capuces, capirotes, capillos y capiruchos, por poner algunos ejemplos. De estos gorros parte el antifaz, una tela que les oculta el rostro, garantizando que solamente Dios los vea.
+          <br>
+          <img src="imagenes/espana.jpg" width="300px" height="200" >
+          <br>
+          <br>
+          Esta festividad, además de estar enraizada en el imaginario popular desde hace siglos, también está muy vinculada con el arte. Lo demuestran, por ejemplo, las numerosas imágenes religiosas de Jesucristo y la Virgen
+          <br>
+          <img src="imagenes/espana2.jpg" width="300px" height="180" >
+          <br>
+          <br>
+       En cada procesión de Semana Santa pueden figurar una o varias hermandades, cada una con su paso o sus pasos, que suelen ser imágenes religiosas de la Pasión de Cristo, o imágenes marianas, aunque hay excepciones como los pasos alegóricos o los de santos. 
+          <br>
+          <img src="imagenes/espana3.jpg" width="300px" height="200" >
+          <br>
+
+          </div>
+
+     </div>
+     </div>
+  <div data-role="footer" data-theme="a">
+    <h4>Mariana Cañete Mendez</h4>
+  </div>
+</div>
+</div>
+
+
+
+
+
+</div>
+</div>
+</body>
+</html>
